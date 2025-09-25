@@ -1,0 +1,159 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+  width: 350px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  background: #2c2c2c;
+  color: #00ffcc;
+  border-radius: 8px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  transition: transform 0.1s, background 0.3s;
+}
+
+button:hover {
+  background: #555;
+}
+
+button:active {
+  transform: scale(0.95);
+  background: #777;
+}
+
+.equal {
+  grid-row: span 2;
+  background: #00cc99;
+  color: black;
+  font-weight: bold;
+}
+
+.zero {
+  grid-column: span 2;
+}
+.operator {
+  background: #ff6600;
+  color: white;
+}
+.operator:hover {
+  background: #ff8533;
+}
+.operator:active {
+  background: #ff9966;
+}
+.clear {
+  background: #ff3333;
+  color: white;
+}
+.clear:hover {
+  background: #ff6666;
+}
+.clear:active {
+  background: #ff8080;
+}
+.memory {
+  background: #0066cc;
+  color: white;
+}
+.memory:hover {
+  background: #3399ff;
+}
+.memory:active {
+  background: #66b3ff;
+}
+.history {
+  background: #9933ff;
+  color: white;
+}
+.history:hover {
+  background: #b366ff;
+}
+.history:active {
+  background: #cc99ff;
+}
+.history-panel {
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #2c2c2c;
+  border-radius: 8px;
+  padding: 10px;
+  color: #00ffcc;
+}
+.history-panel h3 {
+  margin-top: 0;
+}
+.history-panel p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+/* Responsive Design */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+  }
+  #display {
+    height: 50px;
+    font-size: 20px;
+  }
+  button {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 300px) {
+  .buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .equal {
+    grid-row: span 1;
+  }
+  .zero {
+    grid-column: span 3;
+  }
+}
+@media (max-width: 200px) {
+  #display {
+    font-size: 16px;
+  }
+  button {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+/* End of style.css */
